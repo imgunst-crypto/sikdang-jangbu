@@ -92,4 +92,89 @@ body{
 </style>
 </head>
 <body>
-<div id="app">
+<div id="app"><!-- ====== SPLASH ====== -->
+<div class="scr on" id="sSplash" style="background:var(--g);align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+  <div style="width:80px;height:80px;border-radius:22px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:36px;color:#fff;animation:pi .6s cubic-bezier(.2,1.4,.4,1) .2s both;"><i class="ti ti-building-store"></i></div>
+  <div style="font-size:32px;font-weight:800;color:#fff;letter-spacing:-2px;animation:fs .5s ease .5s both;">식당장부</div>
+  <div style="font-size:13px;color:rgba(255,255,255,.6);animation:fs .5s ease .7s both;">선결제 · 후불 · 증빙서류를 한 곳에서</div>
+  <div style="width:48px;height:3px;background:rgba(255,255,255,.2);border-radius:2px;margin-top:24px;overflow:hidden;animation:fs .5s ease .8s both;"><div style="height:100%;background:#fff;border-radius:2px;animation:lb 2s ease .9s both;"></div></div>
+</div>
+
+<!-- ====== ONBOARDING ====== -->
+<div class="scr" id="sOnboard" style="background:var(--bg);">
+  <div style="flex:1;position:relative;overflow:hidden;">
+    <div id="ob0" style="position:absolute;inset:0;display:flex;flex-direction:column;">
+      <div style="flex:1;background:var(--g);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.07);position:absolute;"></div>
+        <div style="font-size:80px;position:relative;z-index:1;">🤝</div>
+        <div style="position:absolute;top:22%;left:8%;background:rgba(255,255,255,.18);border-radius:20px;padding:8px 12px;font-size:12px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;"><i class="ti ti-checks"></i>양측 확인</div>
+        <div style="position:absolute;top:22%;right:8%;background:rgba(255,255,255,.18);border-radius:20px;padding:8px 12px;font-size:12px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;"><i class="ti ti-shield-check"></i>투명 장부</div>
+      </div>
+      <div style="background:var(--wh);border-radius:24px 24px 0 0;padding:24px 20px 20px;">
+        <div style="font-size:22px;font-weight:800;color:var(--tx);letter-spacing:-.5px;line-height:1.3;margin-bottom:10px;">사장님과 손님,<br>둘 다 믿을 수 있는 장부</div>
+        <div style="font-size:14px;color:var(--ts);line-height:1.7;margin-bottom:20px;">모든 거래는 양측이 확인·서명합니다. 더 이상 "얼마 냈지?" 물어볼 필요 없어요.</div>
+        <div style="display:flex;gap:5px;justify-content:center;margin-bottom:20px;">
+          <div style="width:20px;height:4px;border-radius:2px;background:var(--g);"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+        </div>
+        <div style="display:flex;gap:10px;"><button class="btn-out" onclick="go('sLogin')">건너뛰기</button><button class="btn-g" style="flex:1;" onclick="obN(1)">다음 <i class="ti ti-arrow-right"></i></button></div>
+      </div>
+    </div>
+    <div id="ob1" style="position:absolute;inset:0;display:none;flex-direction:column;">
+      <div style="flex:1;background:linear-gradient(135deg,#1a5c3a,#0c447c);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-size:80px;">💳</div>
+        <div style="position:absolute;top:22%;left:8%;background:rgba(255,255,255,.18);border-radius:20px;padding:8px 12px;font-size:12px;font-weight:700;color:#fff;">선결제</div>
+        <div style="position:absolute;top:22%;right:8%;background:rgba(255,255,255,.18);border-radius:20px;padding:8px 12px;font-size:12px;font-weight:700;color:#fff;">후불 정산</div>
+      </div>
+      <div style="background:var(--wh);border-radius:24px 24px 0 0;padding:24px 20px 20px;">
+        <div style="font-size:22px;font-weight:800;color:var(--tx);letter-spacing:-.5px;line-height:1.3;margin-bottom:10px;">선결제도 후불도,<br>원하는 방식으로</div>
+        <div style="font-size:14px;color:var(--ts);line-height:1.7;margin-bottom:20px;">미리 충전 후 차감하거나 월말에 한번에 정산. 거래처마다 다르게 설정할 수 있어요.</div>
+        <div style="display:flex;gap:5px;justify-content:center;margin-bottom:20px;">
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:20px;height:4px;border-radius:2px;background:var(--g);"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+        </div>
+        <div style="display:flex;gap:10px;"><button class="btn-out" onclick="go('sLogin')">건너뛰기</button><button class="btn-g" style="flex:1;" onclick="obN(2)">다음 <i class="ti ti-arrow-right"></i></button></div>
+      </div>
+    </div>
+    <div id="ob2" style="position:absolute;inset:0;display:none;flex-direction:column;">
+      <div style="flex:1;background:linear-gradient(135deg,#c07800,#e8b84b);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-size:80px;">⏱</div>
+        <div style="position:absolute;top:22%;left:8%;background:rgba(255,255,255,.25);border-radius:20px;padding:8px 12px;font-size:11px;font-weight:700;color:#fff;"><i class="ti ti-clock"></i> 48h 자동확정</div>
+        <div style="position:absolute;top:22%;right:5%;background:rgba(255,255,255,.25);border-radius:20px;padding:8px 12px;font-size:11px;font-weight:700;color:#fff;"><i class="ti ti-file-invoice"></i> 증빙서류</div>
+      </div>
+      <div style="background:var(--wh);border-radius:24px 24px 0 0;padding:24px 20px 20px;">
+        <div style="font-size:22px;font-weight:800;color:var(--tx);letter-spacing:-.5px;line-height:1.3;margin-bottom:10px;">확인 못 해도 자동 처리,<br>서류도 한 번에</div>
+        <div style="font-size:14px;color:var(--ts);line-height:1.7;margin-bottom:20px;">48시간 미확인 시 자동 확정. 현금영수증·사업자지출증빙 앱에서 바로 발급.</div>
+        <div style="display:flex;gap:5px;justify-content:center;margin-bottom:20px;">
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:20px;height:4px;border-radius:2px;background:var(--g);"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+        </div>
+        <div style="display:flex;gap:10px;"><button class="btn-out" onclick="go('sLogin')">건너뛰기</button><button class="btn-g" style="flex:1;" onclick="obN(3)">다음 <i class="ti ti-arrow-right"></i></button></div>
+      </div>
+    </div>
+    <div id="ob3" style="position:absolute;inset:0;display:none;flex-direction:column;">
+      <div style="flex:1;background:var(--g);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-size:80px;">🚀</div>
+        <div style="position:absolute;top:22%;left:8%;background:rgba(255,255,255,.18);border-radius:20px;padding:8px 12px;font-size:12px;font-weight:700;color:#fff;"><i class="ti ti-building-store"></i> 사장님</div>
+        <div style="position:absolute;top:22%;right:8%;background:rgba(255,255,255,.18);border-radius:20px;padding:8px 12px;font-size:12px;font-weight:700;color:#fff;"><i class="ti ti-building-community"></i> 구매자</div>
+      </div>
+      <div style="background:var(--wh);border-radius:24px 24px 0 0;padding:24px 20px 20px;">
+        <div style="font-size:22px;font-weight:800;color:var(--tx);letter-spacing:-.5px;line-height:1.3;margin-bottom:10px;">지금 바로<br>시작해볼까요?</div>
+        <div style="font-size:14px;color:var(--ts);line-height:1.7;margin-bottom:20px;">사장님·구매자 하나의 계정으로 두 역할 모두 사용 가능합니다.</div>
+        <div style="display:flex;gap:5px;justify-content:center;margin-bottom:20px;">
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:6px;height:4px;border-radius:2px;background:#e0e0e0;"></div>
+          <div style="width:20px;height:4px;border-radius:2px;background:var(--g);"></div>
+        </div>
+        <button class="btn-g" onclick="go('sLogin')" style="background:linear-gradient(135deg,var(--g),#2d9e5e);">시작하기 <i class="ti ti-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
