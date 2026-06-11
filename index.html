@@ -271,3 +271,157 @@ body{
     <button class="bnav-btn" onclick="go('sSettings')"><i class="ti ti-settings"></i>설정</button>
   </div>
 </div>
+<!-- ====== SELLER ====== -->
+<div class="scr" id="sSeller">
+  <div style="background:var(--g);padding:14px 16px 16px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+      <div><div style="font-size:11px;color:rgba(255,255,255,.55);margin-bottom:3px;">사업자 모드</div><div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px;">한식명가 <i class="ti ti-building-store" style="font-size:16px;opacity:.7;vertical-align:-2px;"></i></div></div>
+      <div style="display:flex;gap:6px;">
+        <button class="tb-ico" onclick="go('sNotif')"><i class="ti ti-bell"></i><div class="ndot"></div></button>
+        <button class="tb-ico" onclick="go('sHome')"><i class="ti ti-home" style="font-size:16px;"></i></button>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;">
+      <div style="flex:1;background:rgba(255,255,255,.13);border-radius:var(--rs);padding:9px 10px;"><div style="font-size:10px;color:rgba(255,255,255,.55);margin-bottom:2px;">미확인</div><div style="font-size:15px;font-weight:800;color:#f9c74f;">5건</div></div>
+      <div style="flex:1;background:rgba(255,255,255,.13);border-radius:var(--rs);padding:9px 10px;"><div style="font-size:10px;color:rgba(255,255,255,.55);margin-bottom:2px;">거래처</div><div style="font-size:15px;font-weight:800;color:#fff;">5곳</div></div>
+      <div style="flex:1;background:rgba(255,255,255,.13);border-radius:var(--rs);padding:9px 10px;"><div style="font-size:10px;color:rgba(255,255,255,.55);margin-bottom:2px;">이달 식사</div><div style="font-size:15px;font-weight:800;color:#fff;">124건</div></div>
+    </div>
+  </div>
+  <div class="pg">
+    <div class="sh"><i class="ti ti-bolt"></i><span>빠른 작업</span></div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+      <button onclick="go('sMealRecord')" style="background:var(--wh);border:1.5px solid var(--br);border-radius:var(--r);padding:16px 12px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;cursor:pointer;font-family:inherit;"><i class="ti ti-tools-kitchen-2" style="font-size:26px;color:var(--g);"></i><span style="font-size:13px;font-weight:700;">식사 기록</span><span style="font-size:11px;color:var(--th);">기록 후 확인 요청</span></button>
+      <button onclick="toast('선결제 충전 등록')" style="background:var(--wh);border:1.5px solid var(--br);border-radius:var(--r);padding:16px 12px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;cursor:pointer;font-family:inherit;"><i class="ti ti-credit-card-pay" style="font-size:26px;color:var(--g);"></i><span style="font-size:13px;font-weight:700;">선결제 등록</span><span style="font-size:11px;color:var(--th);">충전 요청 발송</span></button>
+      <button onclick="go('sHistory')" style="background:var(--wh);border:1.5px solid var(--br);border-radius:var(--r);padding:16px 12px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;cursor:pointer;font-family:inherit;"><i class="ti ti-list-details" style="font-size:26px;color:var(--g);"></i><span style="font-size:13px;font-weight:700;">거래 내역</span><span style="font-size:11px;color:var(--th);">전체 내역 조회</span></button>
+      <button onclick="toast('월말 정산')" style="background:var(--wh);border:1.5px solid var(--br);border-radius:var(--r);padding:16px 12px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;cursor:pointer;font-family:inherit;"><i class="ti ti-receipt-2" style="font-size:26px;color:var(--g);"></i><span style="font-size:13px;font-weight:700;">월말 정산</span><span style="font-size:11px;color:var(--th);">정산서 발급</span></button>
+    </div>
+    <div class="sh" style="margin-top:4px;"><i class="ti ti-building-community"></i><span>거래처</span><span class="cnt">5곳</span></div>
+    <!-- 거래처1 -->
+    <div onclick="go('sClientDetail')" style="background:var(--wh);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden;cursor:pointer;margin-bottom:8px;">
+      <div style="display:flex;">
+        <div style="width:5px;background:var(--g);flex-shrink:0;"></div>
+        <div style="flex:1;padding:12px 12px 0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <div><div style="font-size:15px;font-weight:800;color:var(--tx);">천안시 동남구청</div><div style="font-size:11px;color:var(--th);">이달 ₩423,000</div></div>
+            <div style="text-align:right;"><div style="font-size:10px;color:var(--th);margin-bottom:2px;">선결제 잔액</div><div style="font-size:17px;font-weight:800;color:#c07800;">₩77,000</div></div>
+          </div>
+          <div style="display:flex;gap:5px;margin-bottom:8px;">
+            <span style="font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;background:var(--al);color:#7a5200;">잔액 부족</span>
+            <span style="font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;background:#fff3e0;color:#e67e00;">미확인 2건</span>
+          </div>
+          <div style="display:flex;border-top:1px solid var(--br);">
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:700;color:var(--g);display:flex;align-items:center;justify-content:center;gap:5px;" onclick="event.stopPropagation();go('sMealRecord')"><i class="ti ti-tools-kitchen-2" style="font-size:14px;"></i>식사 기록</button>
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;color:var(--ts);display:flex;align-items:center;justify-content:center;gap:5px;border-left:1px solid var(--br);" onclick="event.stopPropagation();go('sHistory')"><i class="ti ti-list-details" style="font-size:14px;"></i>내역</button>
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:700;color:var(--rd);display:flex;align-items:center;justify-content:center;gap:5px;border-left:1px solid var(--br);" onclick="event.stopPropagation();toast('미확인 처리')"><i class="ti ti-alert-circle" style="font-size:14px;"></i>미확인 2건</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 거래처2 -->
+    <div style="background:var(--wh);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden;">
+      <div style="display:flex;">
+        <div style="width:5px;background:#0C447C;flex-shrink:0;"></div>
+        <div style="flex:1;padding:12px 12px 0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <div><div style="font-size:15px;font-weight:800;color:var(--tx);">천안시청 총무과</div><div style="font-size:11px;color:var(--th);">이달 ₩160,000</div></div>
+            <div style="text-align:right;"><div style="font-size:10px;color:var(--th);margin-bottom:2px;">선결제 잔액</div><div style="font-size:17px;font-weight:800;color:var(--g);">₩340,000</div></div>
+          </div>
+          <div style="display:flex;gap:5px;margin-bottom:8px;">
+            <span style="font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;background:var(--gl);color:#085041;">잔액 정상</span>
+            <span style="font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;background:var(--gl);color:#085041;">확인 완료</span>
+          </div>
+          <div style="display:flex;border-top:1px solid var(--br);">
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:700;color:var(--g);display:flex;align-items:center;justify-content:center;gap:5px;" onclick="go('sMealRecord')"><i class="ti ti-tools-kitchen-2" style="font-size:14px;"></i>식사 기록</button>
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;color:var(--ts);display:flex;align-items:center;justify-content:center;gap:5px;border-left:1px solid var(--br);" onclick="go('sHistory')"><i class="ti ti-list-details" style="font-size:14px;"></i>내역</button>
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;color:var(--ts);display:flex;align-items:center;justify-content:center;gap:5px;border-left:1px solid var(--br);" onclick="toast('확인 완료')"><i class="ti ti-checks" style="font-size:14px;"></i>확인 완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bnav">
+    <button class="bnav-btn on"><i class="ti ti-home"></i>홈</button>
+    <button class="bnav-btn" onclick="go('sHistory')"><i class="ti ti-list-details"></i>내역</button>
+    <button class="bnav-btn" onclick="go('sNotif')"><i class="ti ti-bell"></i>알림</button>
+    <button class="bnav-btn" onclick="go('sHome')"><i class="ti ti-switch-horizontal"></i>전환</button>
+  </div>
+</div>
+
+<!-- ====== BUYER ====== -->
+<div class="scr" id="sBuyer">
+  <div style="background:var(--g);padding:14px 16px 16px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+      <div><div style="font-size:11px;color:rgba(255,255,255,.55);margin-bottom:3px;">구매자 모드</div><div style="font-size:19px;font-weight:800;color:#fff;">천안시 동남구청 <i class="ti ti-building-community" style="font-size:15px;opacity:.7;vertical-align:-2px;"></i></div></div>
+      <div style="display:flex;gap:6px;">
+        <button class="tb-ico" onclick="go('sNotif')"><i class="ti ti-bell"></i><div class="ndot"></div></button>
+        <button class="tb-ico" onclick="go('sHome')"><i class="ti ti-home" style="font-size:16px;"></i></button>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;">
+      <div style="flex:1;background:rgba(255,255,255,.13);border-radius:var(--rs);padding:9px 10px;"><div style="font-size:10px;color:rgba(255,255,255,.55);margin-bottom:2px;">확인 대기</div><div style="font-size:15px;font-weight:800;color:#f9c74f;">5건</div></div>
+      <div style="flex:1;background:rgba(255,255,255,.13);border-radius:var(--rs);padding:9px 10px;"><div style="font-size:10px;color:rgba(255,255,255,.55);margin-bottom:2px;">등록 식당</div><div style="font-size:15px;font-weight:800;color:#fff;">3곳</div></div>
+      <div style="flex:1;background:rgba(255,255,255,.13);border-radius:var(--rs);padding:9px 10px;"><div style="font-size:10px;color:rgba(255,255,255,.55);margin-bottom:2px;">이달 이용</div><div style="font-size:15px;font-weight:800;color:#fff;">₩686K</div></div>
+    </div>
+  </div>
+  <div class="pg">
+    <div class="aw" onclick="go('sConfirm')" style="cursor:pointer;">
+      <i class="ti ti-bell-ringing"></i>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#5c3c00;">확인 대기 5건</div><div style="font-size:11px;color:#7a5200;margin-top:2px;">한식명가 3건 · 청담분식 2건</div></div>
+      <i class="ti ti-chevron-right" style="font-size:18px;color:#c07800;"></i>
+    </div>
+    <div class="sh"><i class="ti ti-building-store"></i><span>등록 식당</span><span class="cnt">3곳</span></div>
+    <!-- 식당1 -->
+    <div style="background:var(--wh);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden;margin-bottom:8px;">
+      <div style="display:flex;">
+        <div style="width:5px;background:var(--g);flex-shrink:0;"></div>
+        <div style="flex:1;padding:12px 12px 0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <div><div style="font-size:15px;font-weight:800;color:var(--tx);">한식명가</div><div style="font-size:11px;color:var(--th);">사장님: 김민준</div></div>
+            <div style="text-align:right;"><div style="font-size:10px;color:var(--th);margin-bottom:2px;">선결제 잔액</div><div style="font-size:17px;font-weight:800;color:#c07800;">₩77,000</div></div>
+          </div>
+          <div style="display:flex;gap:5px;margin-bottom:8px;">
+            <span style="font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;background:var(--al);color:#7a5200;">잔액 부족</span>
+            <span style="font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;background:#fff3e0;color:#e67e00;">확인 대기 3건</span>
+          </div>
+          <div style="display:flex;border-top:1px solid var(--br);">
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:700;color:var(--g);display:flex;align-items:center;justify-content:center;gap:5px;" onclick="go('sConfirm')"><i class="ti ti-check" style="font-size:14px;"></i>내역 확인</button>
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;color:var(--ts);display:flex;align-items:center;justify-content:center;gap:5px;border-left:1px solid var(--br);" onclick="go('sHistory')"><i class="ti ti-list-details" style="font-size:14px;"></i>내역</button>
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:700;color:var(--rd);display:flex;align-items:center;justify-content:center;gap:5px;border-left:1px solid var(--br);" onclick="toast('충전 요청 발송')"><i class="ti ti-credit-card-pay" style="font-size:14px;"></i>충전 요청</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 식당2 -->
+    <div style="background:var(--wh);border:1.5px solid var(--br);border-radius:var(--r);overflow:hidden;margin-bottom:8px;">
+      <div style="display:flex;">
+        <div style="width:5px;background:#534AB7;flex-shrink:0;"></div>
+        <div style="flex:1;padding:12px 12px 0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <div><div style="font-size:15px;font-weight:800;color:var(--tx);">청담분식</div><div style="font-size:11px;color:var(--th);">사장님: 이정희</div></div>
+            <div style="text-align:right;"><div style="font-size:10px;color:var(--th);margin-bottom:2px;">이달 누계</div><div style="font-size:17px;font-weight:800;color:#534AB7;">₩215,000</div></div>
+          </div>
+          <div style="display:flex;gap:5px;margin-bottom:8px;">
+            <span style="font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;background:#eeedfe;color:#3C3489;">후불 정산</span>
+            <span style="font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;background:#fff3e0;color:#e67e00;">확인 대기 2건</span>
+          </div>
+          <div style="display:flex;border-top:1px solid var(--br);">
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:700;color:var(--g);display:flex;align-items:center;justify-content:center;gap:5px;" onclick="go('sConfirm')"><i class="ti ti-check" style="font-size:14px;"></i>내역 확인</button>
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;color:var(--ts);display:flex;align-items:center;justify-content:center;gap:5px;border-left:1px solid var(--br);" onclick="go('sHistory')"><i class="ti ti-list-details" style="font-size:14px;"></i>내역</button>
+            <button style="flex:1;padding:9px 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;color:var(--ts);display:flex;align-items:center;justify-content:center;gap:5px;border-left:1px solid var(--br);" onclick="toast('영수증 발급')"><i class="ti ti-file-invoice" style="font-size:14px;"></i>영수증</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button style="border:2px dashed var(--br);border-radius:var(--r);padding:16px;display:flex;align-items:center;gap:12px;cursor:pointer;background:transparent;width:100%;font-family:inherit;" onclick="toast('새 식당 등록')">
+      <div style="width:40px;height:40px;border-radius:12px;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--g);flex-shrink:0;"><i class="ti ti-plus"></i></div>
+      <div style="text-align:left;"><div style="font-size:14px;font-weight:700;color:var(--g);">새 식당 등록</div><div style="font-size:12px;color:var(--th);margin-top:2px;">식당 코드 입력 또는 직접 등록</div></div>
+      <i class="ti ti-chevron-right" style="color:var(--th);font-size:18px;margin-left:auto;"></i>
+    </button>
+  </div>
+  <div class="bnav">
+    <button class="bnav-btn on"><i class="ti ti-home"></i>홈</button>
+    <button class="bnav-btn" onclick="go('sHistory')"><i class="ti ti-list-details"></i>내역</button>
+    <button class="bnav-btn" onclick="go('sNotif')"><i class="ti ti-bell"></i>알림</button>
+    <button class="bnav-btn" onclick="go('sHome')"><i class="ti ti-switch-horizontal"></i>전환</button>
+  </div>
+</div>
